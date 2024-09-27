@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <locale.h>
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+
+    int operacoes;
+    float numero1, numero2;
+    float soma, subtracao, multiplicacao, divisao;
+    char continuar;
+
+    do
+    {
+        printf("Escolha qual operação você deseja utilizar:\n 1- Soma(+)\n 2- Subtração(-)\n 3- Multiplicação(*)\n 4- Divisão(/)\n");
+        scanf("%i", &operacoes);
+
+        if (operacoes == 1)
+    {
+        printf("Operação escolhida foi Soma, ");
+        printf("digite o primeiro número: ");
+        scanf("%f", &numero1);
+        printf("\nAgora digite o segundo número: ");
+        scanf("%f", &numero2);
+
+        soma = (numero1 + numero2);
+
+        printf("%.2f\n", soma);
+    }
+    else if (operacoes == 2)
+    {
+        printf("Operação escolhida foi Subtração, ");
+        printf("digite o primeiro número: ");
+        scanf("%f", &numero1);
+        printf("\nAgora digite o segundo número:");
+        scanf("%f", &numero2);
+
+        subtracao = (numero1 - numero2);
+
+        printf("%.2f\n", subtracao);
+    }
+    else if (operacoes == 3)
+    {
+        printf("Operação escolhida foi Multiplicação, ");
+        printf("digite o primeiro número: ");
+        scanf("%f", &numero1);
+        printf("\nAgora digite o segundo número:");
+        scanf("%f", &numero2);
+
+        multiplicacao = (numero1 * numero2);
+
+        printf("%.2f\n", multiplicacao);
+    }
+    else if (operacoes == 4)
+    {
+        printf("Operação escolhida foi Divisão, ");
+        printf("digite o primeiro número: ");
+        scanf("%f", &numero1);
+        printf("\nAgora digite o segundo número:");
+        scanf("%f", &numero2);
+
+        divisao = (numero1 / numero2);
+
+        printf("%.2f\n", divisao);
+    }
+
+        printf("Deseja fazer mais alguma operação? (s/n): ");
+        scanf(" %c", &continuar);
+
+    } while (continuar == 's');
+
+    return 0;
+}
